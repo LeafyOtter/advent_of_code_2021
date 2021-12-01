@@ -20,7 +20,23 @@ Each day i will roll a d20 and use the language associated with it.
 |  18-19  | C (norm)     |
 |    20   | C            |
 
+> ASM?
+
+Assembly language. I will use the x86 set of instructions, so it can work on my computer.
+
+> What is C (norm) ?
+
+It's basic C, except i have to follow the writing norm used in my school.
+Which restrict the utilisation of some control structure, like for, switch, or case. It also restricts the utilisation of external functions. (This one depend of the project though.)  
+So basicly no fgets(), printf() or basic function. I will only be able to use syscall, or wrappers of syscall.
+A few of the functions i will allow myself are write(), read(), malloc(), free(), open(), close(), etc.
+Of course I will modify this list depending of the question.
+
 
 ## Logs of the event
 
 Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.
+
+## Language version and Softwares used
+
+- Version of Java : openjdk 17.0.1 2021-10-19
