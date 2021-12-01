@@ -19,3 +19,8 @@ Each day i will roll a d20 and use the language associated with it.
 |  16-17  | Rust         |
 |  18-19  | C (norm)     |
 |    20   | C            |
+
+
+## Logs of the event
+
+Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.
