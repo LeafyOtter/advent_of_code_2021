@@ -32,6 +32,14 @@ class SonarSweep {
 */
 
 //	Part 2;
+
+/*
+ *	The exercice ask to compare the sum of 3 measurement.
+ *	Except the measurement in question are next to each other.
+ *	So instead of comparing a + b + c to b + c + d.
+ *	I only compare a to d.
+ */
+
 class SonarSweep {
 	public static void main(String[] args) {
 		if (args.length == 0) {
