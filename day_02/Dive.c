@@ -15,11 +15,11 @@ void	part_one(FILE *stream)
 	x = y = 0;
 	while (fgets(buffer, 32, stream))
 	{
-		if (!strncmp(buffer, "forward", FORWARD))
+		if (strstr(buffer, "forward"))
 			x += atoi(buffer + FORWARD);
-		if (!strncmp(buffer, "down", DOWN))
+		if (strstr(buffer, "down"))
 			y += atoi(buffer + DOWN);
-		if (!strncmp(buffer, "up", UP))
+		if (strstr(buffer, "up"))
 			y -= atoi(buffer + UP);
 	}
 	printf("Horizontal position : %i\nDepth : %i\nAnswer : %i\n", x, y, x * y);
@@ -34,14 +34,14 @@ void	part_two(FILE *stream)
 	x = x2 = y = aim = 0;
 	while (fgets(buffer, 32, stream))
 	{
-		if (!strncmp(buffer, "forward", FORWARD)) {
+		if (strstr(buffer, "forward")) {
 			x2 = atoi(buffer + FORWARD);
 			x += x2;
 			y += aim * x2;
 		}
-		if (!strncmp(buffer, "down", DOWN))
+		if (strstr(buffer, "down"))
 			aim += atoi(buffer + DOWN);
-		if (!strncmp(buffer, "up", UP))
+		if (strstr(buffer, "up"))
 			aim -= atoi(buffer + UP);
 	}
 	printf("Horizontal position : %i\nDepth : %i\nAnswer : %i\n", x, y, x * y);
@@ -62,9 +62,9 @@ int	main(int ac, char **av)
 		printf("Error: %s\n", strerror(errno));
 		return (1);
 	}
-	if (!strcmp(av[2], "part_1"))
+	if (strstr(av[2], "part_1"))
 		part_one(stream);
-	else if (!strcmp(av[2], "part_2"))
+	else if (strstr(av[2], "part_2"))
 		part_two(stream);
 	else {
 		printf("Error: Expecting second to be part_1 or part_2");
