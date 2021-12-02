@@ -32,11 +32,15 @@ So basicly no fgets(), printf() or basic function. I will only be able to use sy
 A few of the functions i will allow myself are write(), read(), malloc(), free(), open(), close(), etc.
 Of course I will modify this list depending of the question.
 
+---
 
-## Logs of the event
+### Logs of the event
 
-Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.
+Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.  
+Day 2 : Rolled a 20. Language is C. That's pretty sweet.  
 
-## Language version and Softwares used
+---
+
+### Language version and Softwares used
 
 - Version of Java : openjdk 17.0.1 2021-10-19
