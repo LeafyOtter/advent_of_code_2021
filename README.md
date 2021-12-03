@@ -38,9 +38,11 @@ Of course I will modify this list depending of the question.
 
 Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.  
 Day 2 : Rolled a 20. Language is C. That's pretty sweet.  
+Day 3 : Rolled a 5. Shell script is harsh honestly.  
 
 ---
 
 ### Language version and Softwares used
 
 - Version of Java : openjdk 17.0.1 2021-10-19
+- C compiler : gcc version 11.1.0 (GCC)
