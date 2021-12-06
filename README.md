@@ -39,10 +39,16 @@ Of course I will modify this list depending of the question.
 Day 1 : Rolled a 1. Language is Java. Was not that bad honestly.  
 Day 2 : Rolled a 20. Language is C. That's pretty sweet.  
 Day 3 : Rolled a 5. Shell script is harsh honestly.  
+Day 4 : Rolled a 13. Go it is.  
+Day 5 : Rolled a 3. Assembly will be fun honestly :)  
+(I won't do day 4 and day 5 on time, cause i spend too much time on day 3
+i'll allocate some time after i've done the problem of the day)  
+Day 6 : Rolled a 9. Never programmed in functionnal, will be fun.  
 
 ---
 
 ### Language version and Softwares used
 
-- Version of Java : openjdk 17.0.1 2021-10-19
-- C compiler : gcc version 11.1.0 (GCC)
+- Version of Java : openjdk 17.0.1 2021-10-19  
+- C compiler : gcc version 11.1.0 (GCC)  
+- GNU bash, version 5.1.12  

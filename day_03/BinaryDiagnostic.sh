@@ -1,27 +1,5 @@
 #!/usr/bin/env bash
 
-#reading data from the user
-# read -p 'Enter a : ' a
-# read -p 'Enter b : ' b
-#   
-# bitwiseAND=$(( a&b ))
-# echo Bitwise AND of a and b is $bitwiseAND
-#   
-# bitwiseOR=$(( a|b ))
-# echo Bitwise OR of a and b is $bitwiseOR
-#   
-# bitwiseXOR=$(( a^b ))
-# echo Bitwise XOR of a and b is $bitwiseXOR
-#   
-# bitiwiseComplement=$(( ~a ))
-# echo Bitwise Compliment of a is $bitiwiseComplement
-#   
-# leftshift=$(( a<<1 ))
-# echo Left Shift of a is $leftshift
-#   
-# rightshift=$(( b>>1 ))
-# echo Right Shift of b is $rightshift
-
 part_one () {
 	i=0;
 	gamma=0;
@@ -60,83 +38,60 @@ part_one () {
 }
 
 put_in_array () {
-	local -n arr=$1
 	while read line; do 
-		arr+=("$line");
-	done < $2
-}
-
-get_oxygen () {
-	local -n to_remove_=$1;
-	count_0=0;
-	count_1=0;
-	for value in $2; do
-		printf "debug %s" ${value:$3:1}
-		if [ '${value:$3:1}' = '0' ]; then
-			((count_0++));
-		else
-			((count_1++));
-		fi
-	done
-	printf "%i %i\n" $count_0 $count_1
-	if [ $count_0 -lt $count_1 ]; then
-		to_remove_="0";
-	else
-		to_remove_="1";
-	fi 
+		array+=("$line");
+	done < $1
 }
 
 part_two () {
+	input=$(cat $1);
+	oxygen="";
+	co2="";
 	i=0;
-	oxygen=0;
-	co2=0;
-	local array;
-	local to_remove;
-	put_in_array array $1;
 	while [ $i -lt 12 ]; do
-		j=0;
-		get_oxygen to_remove $array $i;
-		printf "%s\n" $to_remove
-		for value in array; do 
-			if [ '${value:$i:1}' = $to_remove ]; then
-				unset 'array[$j]';
-			fi
-			((j++));
-		done
-		if [ ${#array[@]} -eq 1 ]; then
+		count_total=$(grep "^${oxygen}" input | wc -l);
+		if [ $count_total = 1 ]; then
+			oxygen=$(grep "^${oxygen}" input);
 			break ;
 		fi
+		count_1=$(grep "^"${oxygen}1"" input | wc -l);
+		count_0=$(($count_total - $count_1));
 		((i++));
+ 		if [ $count_1 -lt $count_0 ]; then
+ 			oxygen+="0";
+ 		else
+ 			oxygen+="1";
+		fi
 	done
-	printf "%i %s\n" ${#array[@]} $array;
+	i=0;
+	while [ $i -lt 12 ]; do
+		count_total=$(grep "^${co2}" input | wc -l);
+		if [ $count_total = 1 ]; then
+			co2=$(grep "^${co2}" input);
+			break ;
+		fi
+		count_1=$(grep "^"${co2}1"" input | wc -l);
+		count_0=$(($count_total - $count_1));
+		((i++));
+ 		if [ $count_1 -lt $count_0 ]; then
+ 			co2+="1";
+ 		else
+ 			co2+="0";
+		fi
+ 	done
+	printf "Oxygen Value : %i\n" "$((2#$oxygen))"
+	printf "CO2 Value : %i\n" "$((2#$co2))"
+	printf "Life support rating : %i\n" $((2#$oxygen * 2#$co2))
+	# YES FINALLY FUCK YOU DAY 3 PART 2
 }
-#	printf "%i %s\n" ${#array[@]} $array;
-#	while [ $i -lt 12 ];
-#	do
-
-	
-#		((i++));
-#	done
 
 read -p "Insert file name : " filename
 read -p "part_1 or part_2 : " part
 
-if [ $part = 'part_1' ];
-then
+if [ $part = 'part_1' ]; then
 	part_one $filename;
-elif [ $part = 'part_2' ];
-then
+elif [ $part = 'part_2' ]; then
 	part_two $filename;
 else
 	echo "Expecting either Part_1 or Part_2";
 fi
-
-#while read character
-#do 
-#echo $character
-#done < $1
-
-# 100110110100
-
-# 011001001011
-# 110010010110
