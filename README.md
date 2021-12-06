@@ -41,8 +41,8 @@ Day 2 : Rolled a 20. Language is C. That's pretty sweet.
 Day 3 : Rolled a 5. Shell script is harsh honestly.  
 Day 4 : Rolled a 13. Go it is.  
 Day 5 : Rolled a 3. Assembly will be fun honestly :)  
-(I won't do day 4 and day 5 on time, cause i spend too much time on day 3
-i'll allocate some time after i've done the problem of the day)  
+(I won't do day 4 and day 5 on time, cause i spend too much time on day 3.
+I'll allocate some time after i've done the problem of the day)  
 Day 6 : Rolled a 9. Never programmed in functionnal, will be fun.  
 
 ---
